@@ -1,4 +1,4 @@
-# <center>导航栏制作（实践flex布局和scss）5.16</center>
+# <center>导航栏制作（实践flex布局和scss）5.17</center>
 
 ### scss设计：
 ```scss
@@ -6,6 +6,7 @@ body{
     background-color: rgb(214, 232, 239);
     display: flex;
     flex-direction:column;
+    height: auto;
    
 }
 .topbar {
@@ -25,60 +26,115 @@ body{
 }
 
 .sorce {
-    height: 900px;
+    height: auto;
     width: 100%;
     background-color: rgb(250, 239, 239);
     display: flex;
+    justify-content: flex-start;
     .navigation  {
-   
-        width: 15% ;
-        background-color: rgb(26, 64, 112);
+        height: auto;
+        width: 250px ;
+        background-color: #263238;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
         a{
             text-decoration: none;
+            text-indent: 20px;
+            height: 200px;
+            counter-reset: section;
         }
         a:hover{
-            color: rgb(53, 210, 119);
-        }
-        a:visited {
-            color:blue;
+            color: #F7BD00;
         }
         a1{
+            text-indent: 20px;
+            font-weight:bolder;
             text-decoration: none;
-            color: rgb(254, 254, 254);
-            text-align: center;
-            line-height: 20px; 
+            color: #FFFFFF;
+            text-align: left;
+            line-height: 50px; 
             margin-top: 0px;
-            flex: 1;
+            flex: 0;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
+        }
+        :nth-child(2)::before{
+            content:url(./iconfont/con1.png);   
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(3)::before{
+            content:url(./iconfont/con2.png);
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(4)::before{
+            content:url(./iconfont/con3.png);
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(5)::before{
+            content:url(./iconfont/con4.png);
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(6)::before{
+            content:url(./iconfont/con5.png);
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(8)::before{
+            content:url(./iconfont/con6.png);
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(9)::before{
+            content:url(./iconfont/con7.png);
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(10)::before{
+            content:url(./iconfont/con8.png);
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(11)::before{
+            content:url(./iconfont/con9.png);
+            display: flex;
+            align-items: center;
+        }
+        :nth-child(12)::before{
+            content:url(./iconfont/con10.png);
+            display: flex;
+            align-items: center;
         }
     }
     .neiron {
         width: 100%;
+        height: 900px;
     
     }
     .daohang{
-        background-color: rgb(15, 10, 90);
-        line-height: 20px; 
+        background-color: #263238;
+        line-height: 50px; 
         margin-top: 0px;
-        text-align: center;
-        color: wheat;
-        flex: 1;
+        text-align: left;
+        color: #FFFFFF;
+        flex: 0;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
+        flex-shrink: 0;
+        img{
+            display: flex;
+        }
     }
 }
-
 ```
 ### html
-- 还未来得及使用小图标
-- 为了测试出点击的实现，菜单栏链接几个常见网站
-- js代码放在html中，用作点击事件后的显示的变化，但是比较低效（时间复杂度O（n））
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -132,4 +188,4 @@ body{
 
 ### 运行展示
 
-![运行展示](./1.png "运行展示")
+![运行展示](./2.png "运行展示")
