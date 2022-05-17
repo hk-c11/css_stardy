@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(214, 232, 239);
+    display: flex;
+    flex-direction:column;
+   
+}
+.topbar {
+    height: 50px; 
+    width: 100%;
+    background-color: rgb(214, 232, 239);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    p{
+        line-height: 15px;
+        margin: auto;
+        font-size: 30px;
+        color: rgb(18, 18, 17);;
+     }
+
+}
+
+.sorce {
+    height: 900px;
+    width: 100%;
+    background-color: rgb(250, 239, 239);
+    display: flex;
+    .navigation  {
+   
+        width: 15% ;
+        background-color: rgb(26, 64, 112);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(53, 210, 119);
+        }
+        a:visited {
+            color:blue;
+        }
+        a1{
+            text-decoration: none;
+            color: rgb(254, 254, 254);
+            text-align: center;
+            line-height: 20px; 
+            margin-top: 0px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .neiron {
+        width: 100%;
+    
+    }
+    .daohang{
+        background-color: rgb(15, 10, 90);
+        line-height: 20px; 
+        margin-top: 0px;
+        text-align: center;
+        color: wheat;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
