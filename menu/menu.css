@@ -1,0 +1,128 @@
+body {
+  background-color: #d6e8ef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+
+.topbar {
+  height: 50px;
+  width: 100%;
+  background-color: #d6e8ef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.topbar p {
+  line-height: 15px;
+  margin: auto;
+  font-size: 30px;
+  color: #121211;
+}
+
+.sorce {
+  height: auto;
+  width: 100%;
+  background-color: #faefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.sorce .navigation {
+  height: auto;
+  width: 250px;
+  background-color: #263238;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.sorce .navigation a {
+  text-decoration: none;
+  text-indent: 20px;
+  height: 200px;
+  counter-reset: section;
+}
+
+.sorce .navigation a:hover {
+  color: #F7BD00;
+}
+
+.sorce .navigation a1 {
+  text-indent: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: left;
+  line-height: 50px;
+  margin-top: 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.sorce .neiron {
+  width: 100%;
+  height: 900px;
+}
+
+.sorce .daohang {
+  background-color: #263238;
+  line-height: 50px;
+  margin-top: 0px;
+  text-align: left;
+  color: #FFFFFF;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.sorce .daohang img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=menu.css.map */

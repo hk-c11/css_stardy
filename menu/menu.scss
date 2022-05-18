@@ -56,56 +56,6 @@ body{
             align-items: center;
             justify-content: left;
         }
-        :nth-child(2)::before{
-            content:url(./iconfont/con1.png);   
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(3)::before{
-            content:url(./iconfont/con2.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(4)::before{
-            content:url(./iconfont/con3.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(5)::before{
-            content:url(./iconfont/con4.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(6)::before{
-            content:url(./iconfont/con5.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(8)::before{
-            content:url(./iconfont/con6.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(9)::before{
-            content:url(./iconfont/con7.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(10)::before{
-            content:url(./iconfont/con8.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(11)::before{
-            content:url(./iconfont/con9.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(12)::before{
-            content:url(./iconfont/con10.png);
-            display: flex;
-            align-items: center;
-        }
     }
     .neiron {
         width: 100%;
