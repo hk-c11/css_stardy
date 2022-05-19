@@ -1,4 +1,4 @@
-# <center>导航栏制作（实践flex布局和scss）5.17</center>
+# <center>导航栏制作（实践flex布局和scss）5.19</center>
 
 ### scss设计：
 ```scss
@@ -44,9 +44,6 @@ body{
             height: 200px;
             counter-reset: section;
         }
-        a:hover{
-            color: #F7BD00;
-        }
         a1{
             text-indent: 20px;
             font-weight:bolder;
@@ -59,56 +56,6 @@ body{
             display: flex;
             align-items: center;
             justify-content: left;
-        }
-        :nth-child(2)::before{
-            content:url(./iconfont/con1.png);   
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(3)::before{
-            content:url(./iconfont/con2.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(4)::before{
-            content:url(./iconfont/con3.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(5)::before{
-            content:url(./iconfont/con4.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(6)::before{
-            content:url(./iconfont/con5.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(8)::before{
-            content:url(./iconfont/con6.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(9)::before{
-            content:url(./iconfont/con7.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(10)::before{
-            content:url(./iconfont/con8.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(11)::before{
-            content:url(./iconfont/con9.png);
-            display: flex;
-            align-items: center;
-        }
-        :nth-child(12)::before{
-            content:url(./iconfont/con10.png);
-            display: flex;
-            align-items: center;
         }
     }
     .neiron {
@@ -144,42 +91,68 @@ body{
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="./menu.css" />
+  <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_3410033_85ns0y7zkkk.css">
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function(){
+
+      $("#theFirst").click(function(){
+        $(this).parent().children("a:lt(5)").slideToggle("fast");
+      });
+
+      $("#theSecond").click(function(){
+        $(this).parent().children("a:gt(4)").slideToggle("fast");
+      });
+
+      $("a").click(function(){
+        $("a").not(this).css('background','#263238');
+        $("a").not(this).css('color','white');
+        $(this).css('background-color','black');
+        $(this).css('color','wheat');
+      });
+
+      $("a1").hover(function(){
+        $(this).css("color","#F7BD00");
+      },function(){
+        $(this).css("color","white");
+      });
+
+      $("a").hover(function(){
+        $(this).css("color","#F7BD00");
+      },function(){
+        if($(this).css("background-color")=="rgb(0, 0, 0)"){
+          $(this).css("color","wheat");
+        }
+        else{
+          $(this).css("color","white");
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
-
   <div class="topbar">
     <p>左边菜单栏暂时连接一些常见网站</p>
   </div>
 
   <div class="sorce">
     <div class="navigation">
-      <a1>监控中心</a1>
-      <a href="https://www.bilibili.com/" class="daohang" target="d" onclick="changeColor(this)">实时数据</a>
-      <a href="http://www.kugou.com/" class="daohang" target="d" onclick="changeColor(this)">关注</a>
-      <a href="https://y.qq.com/?ADTAG=myqq#type=index" class="daohang" target="d" onclick="changeColor(this)">历史数据</a>
-      <a href="https://music.migu.cn/v3" class="daohang" target="d" onclick="changeColor(this)">事件数据</a>
-      <a href="https://www.youku.com/" class="daohang" target="d" onclick="changeColor(this)">未安装事件数据</a>
-      <a1>系统管理</a1>
-      <a href="https://v.qq.com/" class="daohang" target="d" onclick="changeColor(this)">集装箱管理</a>
-      <a href="https://www.iqiyi.com/" class="daohang" target="d" onclick="changeColor(this)">部门管理</a>
-      <a href="https://github.com/" class="daohang" target="d" onclick="changeColor(this)">角色管理</a>
-      <a href="https://www.acfun.cn/" class="daohang" target="d" onclick="changeColor(this)">设备管理</a>
-      <a href="https://leetcode-cn.com/" class="daohang" target="d" onclick="changeColor(this)">账号管理</a>
+      <a1 id="theFirst">监控中心</a1>
+      <a href="https://www.bilibili.com/" class="daohang" target="d"><i class="iconfont icon-shishishuju"></i>实时数据</a>
+      <a href="http://www.kugou.com/" class="daohang" target="d"><i class="iconfont icon-guanzhu1"></i>关注</a>
+      <a href="https://y.qq.com/?ADTAG=myqq#type=index" class="daohang" target="d"><i class="iconfont icon-lishishuju"></i>历史数据</a>
+      <a href="https://music.migu.cn/v3" class="daohang" target="d"><i class="iconfont icon-shijian"></i>事件数据</a>
+      <a href="https://www.youku.com/" class="daohang" target="d"><i class="iconfont icon-shebeishuju"></i>未安装事件数据</a>
+      <a1 id="theSecond">系统管理</a1>
+      <a href="https://v.qq.com/" class="daohang" target="d"><i class="iconfont icon-jizhuangxiang"></i>集装箱管理</a>
+      <a href="https://www.iqiyi.com/" class="daohang" target="d"><i class="iconfont icon-bumen"></i>部门管理</a>
+      <a href="https://github.com/" class="daohang" target="d"><i class="iconfont icon-jiaosequnti"></i>角色管理</a>
+      <a href="https://www.acfun.cn/" class="daohang" target="d"><i class="iconfont icon-shebei"></i>设备管理</a>
+      <a href="https://leetcode-cn.com/" class="daohang" target="d"><i class="iconfont icon-user"></i>账号管理</a>
     </div>
 
     <iframe name="d" class="neiron" frameborder="0"></iframe>
-    <script type="text/javascript">
-      function changeColor(obj) {
-        allObj = document.getElementsByClassName("daohang");
-        for (var i = 0; i < allObj.length; i++) {
-          allObj[i].style.background = 'rgb(15, 10, 90)';
-          allObj[i].style.color = 'wheat';
-        }
-        obj.style.background = 'black';
-        obj.style.color = 'white';
-      }	
-    </script>
   </div>
 </body>
 
@@ -188,4 +161,4 @@ body{
 
 ### 运行展示
 
-![运行展示](./2.png "运行展示")
+![运行展示](./4.png "运行展示")
