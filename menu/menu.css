@@ -67,10 +67,6 @@ body {
   counter-reset: section;
 }
 
-.sorce .navigation a:hover {
-  color: #F7BD00;
-}
-
 .sorce .navigation a1 {
   text-indent: 20px;
   font-weight: bolder;
