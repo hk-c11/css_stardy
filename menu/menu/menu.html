@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./menu.css" />
+  <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_3410033_85ns0y7zkkk.css">
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    // $(function(){
+
+    //   $("#theFirst").click(function(){
+    //     $(this).parent().children("a:lt(5)").slideToggle("fast");
+    //   });
+
+    //   $("#theSecond").click(function(){
+    //     $(this).parent().children("a:gt(4)").slideToggle("fast");
+    //   });
+
+    //   $("a").click(function(){
+    //     $("a").not(this).css('background','#263238');
+    //     $("a").not(this).css('color','white');
+    //     $(this).css('background-color','black');
+    //     $(this).css('color','wheat');
+    //   });
+
+    //   $("a1").hover(function(){
+    //     $(this).css("color","#F7BD00");
+    //   },function(){
+    //     $(this).css("color","white");
+    //   });
+
+    //   $("a").hover(function(){
+    //     $(this).css("color","#F7BD00");
+    //   },function(){
+    //     if($(this).css("background-color")=="rgb(0, 0, 0)"){
+    //       $(this).css("color","wheat");
+    //     }
+    //     else{
+    //       $(this).css("color","white");
+    //     }
+    //   });
+    // });
+
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <p>左边菜单栏暂时连接一些常见网站</p>
+  </div>
+
+  <div class="sorce">
+    <div class="navigation">
+      <a1 class="menu-label" id="theFirst">监控中心</a1>
+      <div class="menus active">
+
+        <a href="../page1/page1.html" class="daohang" target="d"><i class="iconfont icon-shishishuju"></i>实时数据</a>
+        <a href="http://www.kugou.com/" class="daohang" target="d"><i class="iconfont icon-guanzhu1"></i>关注</a>
+        <a href="https://y.qq.com/?ADTAG=myqq#type=index" class="daohang" target="d"><i class="iconfont icon-lishishuju"></i>历史数据</a>
+        <a href="https://music.migu.cn/v3" class="daohang" target="d"><i class="iconfont icon-shijian"></i>事件数据</a>
+        <a href="https://www.youku.com/" class="daohang" target="d"><i class="iconfont icon-shebeishuju"></i>未安装事件数据</a>
+      </div>
+      <a1 class="menu-label" id="theSecond">系统管理</a1>
+      <div class="menus">
+      
+        <a href="https://v.qq.com/" class="daohang" target="d"><i class="iconfont icon-jizhuangxiang"></i>集装箱管理</a>
+        <a href="https://www.iqiyi.com/" class="daohang" target="d"><i class="iconfont icon-bumen"></i>部门管理</a>
+        <a href="https://github.com/" class="daohang" target="d"><i class="iconfont icon-jiaosequnti"></i>角色管理</a>
+        <a href="https://www.acfun.cn/" class="daohang" target="d"><i class="iconfont icon-shebei"></i>设备管理</a>
+        <a href="https://leetcode-cn.com/" class="daohang" target="d"><i class="iconfont icon-user"></i>账号管理</a>
+      </div>
+    </div>
+
+    <iframe name="d" class="neiron" frameborder="0"></iframe>
+  </div>
+</body>
+<script>
+    $('body').on('click','.menu-label',function(e){
+      var _this = $(this)
+      _this.next().toggleClass('active')//为该元素添加该class
+    })
+
+    $('body').on('click','.daohang',function(e){
+      $("a").not(this).css('background','#263238');
+      $("a").not(this).css('color','white');
+      $(this).css('background-color','black');
+      $(this).css('color','wheat');
+    })
+</script>
+</html>
