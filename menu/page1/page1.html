@@ -9,26 +9,32 @@
   <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
 </head>
 <body>  
-<div style="margin-bottom: 5px;">          
+<div style="margin-bottom: 10px;">          
 </div>
  
-<div class="layui-btn-group demoTable">
-  <button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
-  <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
-  <button class="layui-btn" data-type="isAll">验证是否全选</button>
+
+<div class="layui-inline">
+  <label class="layui-form-label">查询</label>
+  <div class="layui-input-inline">
+    <input type="text" name="number" autocomplete="off" class="layui-input">
+  </div>
+</div>
+
+<div class="layui-btn-container">
+  <button type="button" class="layui-btn"><i class="layui-icon  layui-icon-addition">新增</i></button>
 </div>
  
 <table lay-filter="demo" lay-data="{height:800, page:true}" lay-filter="demo">
     <thead>
       <tr>
         <th lay-data="{type:'checkbox', width:40}"></th>
-        <th lay-data="{field:'Uid' }">序号</th>
-        <th lay-data="{field:'name', sort:true}">用户名</th>
-        <th lay-data="{field:'user', sort:true}">角色</th>
-        <th lay-data="{field:'department', sort:true}">部门</th>
-        <th lay-data="{field:'creat-time', sort:true}">创建时间</th>
-        <th lay-data="{field:'lock', width:160}">是否锁定</th>
-        <th lay-data="{width:180, align:'center', toolbar: '#barDemo'}">操作</th>
+        <th lay-data="{field:'Uid'}">序号</th>
+        <th lay-data="{field:'name'}">用户名</th>
+        <th lay-data="{field:'user'}">角色</th>
+        <th lay-data="{field:'department'}">部门</th>
+        <th lay-data="{field:'creat-time'}">创建时间</th>
+        <th lay-data="{align:'center', toolbar: '#locked', width:120}">是否锁定</th>
+        <th lay-data="{width:240, align:'center', toolbar: '#barDemo'}">操作</th>
       </tr> 
     </thead>
     <tbody>
@@ -42,18 +48,31 @@
         <td>锁定</td>
         <td></td>
       </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>test66</td>
+        <td>常规管理员</td>
+        <td>测试部</td>
+        <td>2022-03-24 11:39:58</td>
+        <td>锁定</td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
  
 <script type="text/html" id="barDemo">
-  <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+  <a class="layui-btn layui-btn-normal layui-btn-xs" style="background-color:#0b2957;" lay-event="assignment">分配集装箱</a>
+</script>
+
+<script type="text/html" id="locked">
+  <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="assignment">锁定</a>
 </script>
                
           
 <script src="../layui/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
 <script>
 layui.use('table', function(){
     var table = layui.table;
